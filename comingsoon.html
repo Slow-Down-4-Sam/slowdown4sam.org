@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slow Down 4 Sam | Coming Soon</title>
+  <meta name="description" content="Slow Down 4 Sam — A Michigan non-profit dedicated to teaching motorcycle safety to young adults in honor of Sam Gross.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2332;
+      --accent: #F5B041;          /* matches logo yellow */
+      --accent-soft: #F9C76B;     /* lighter hover state */
+      --text: #f0f4f8;
+      --muted: #94a3b8;
+      --border: #2d3a4f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Subtle road-inspired background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(245, 176, 65, 0.12), transparent),
+        linear-gradient(180deg, #0f1419 0%, #151c27 100%);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(245, 176, 65, 0.12);
+      border: 1px solid rgba(245, 176, 65, 0.35);
+      color: var(--accent-soft);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.75rem;
+    }
+
+    .badge svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.4rem, 7vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.55;
+      margin-bottom: 2.5rem;
+    }
+
+    .coming-soon {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .coming-soon::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      margin: 0.75rem auto 0;
+      border-radius: 2px;
+    }
+
+    .mission {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      margin-bottom: 2.5rem;
+      max-width: 540px;
+    }
+
+    .mission p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: #cbd5e1;
+    }
+
+    .mission strong {
+      color: var(--text);
+    }
+
+    /* Email signup */
+    .signup {
+      width: 100%;
+      max-width: 420px;
+      margin-bottom: 2.5rem;
+    }
+
+    .signup label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+      text-align: left;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .form-row input {
+      flex: 1;
+      min-width: 200px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.85rem 1.1rem;
+      font-size: 1rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-row input:focus {
+      border-color: var(--accent);
+    }
+
+    .form-row input::placeholder {
+      color: #64748b;
+    }
+
+    .form-row button {
+      background: var(--accent);
+      color: #0f1419;
+      border: none;
+      border-radius: 10px;
+      padding: 0.85rem 1.4rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+
+    .form-row button:hover {
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+
+    .form-row button:active {
+      transform: translateY(0);
+    }
+
+    .contact {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--accent-soft);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+      border-top: 1px solid var(--border);
+    }
+
+    footer span {
+      color: var(--muted);
+    }
+
+    /* Small decorative motorcycle icon */
+    .icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1.25rem;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 480px) {
+      .form-row {
+        flex-direction: column;
+      }
+      .form-row button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Simple helmet / safety icon -->
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.5 4.5-3.5 5.5L12 22l-3.5-7.5C6.5 13.5 5 11.5 5 9a7 7 0 0 1 7-7z" stroke="var(--accent)"/>
+      <circle cx="12" cy="9" r="2.5" fill="var(--accent)" opacity="0.3"/>
+    </svg>
+
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      Michigan Non-Profit
+    </div>
+
+    <h1>Slow Down <span>4 Sam</span></h1>
+    
+    <p class="tagline">
+      Teaching motorcycle safety to young adults<br>
+      in honor of Sam Gross
+    </p>
+
+    <div class="coming-soon">Coming Soon</div>
+
+    <div class="mission">
+      <p>
+        We’re building a place dedicated to keeping young riders safe on Michigan roads. 
+        <strong>Slow Down 4 Sam</strong> exists to honor Sam’s memory by equipping the next generation 
+        with the skills, awareness, and respect that save lives.
+      </p>
+    </div>
+
+    <p class="contact">
+      Questions? Reach us at<br>
+      <a href="mailto:contact@slowdown4sam.org">contact@slowdown4sam.org</a>
+    </p>
+  </div>
+
+  <footer>
+    <span>© 2026 Slow Down 4 Sam</span> · Michigan · In memory of Sam Gross
+  </footer>
+</body>
+</html>
