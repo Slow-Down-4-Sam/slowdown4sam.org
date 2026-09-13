@@ -55,7 +55,7 @@ app.get('/privacy', async function(req, res) {
 });
 
 // MAKE SURE THIS IS LAST FOR 404 PAGE REDIRECT
-app.get('/{*splat}', function(req, res){
+app.get('/*', function(req, res){
     res.render('404.ejs');
 });
 
