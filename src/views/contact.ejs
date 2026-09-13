@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Contact · Slow Down 4 Sam</title>
+        <meta name="description" content="Slow Down 4 Sam — Michigan nonprofit honoring Sam Gross through motorcycle safety and youth programs.">
+        <meta property="og:title" content="Contact · Slow Down 4 Sam" />
+        <meta property="og:description" content="Contact information for Slow Down 4 Sam, a Michigan nonprofit honoring Sam Gross through motorcycle safety and youth programs." />
+        <%- include('_global_meta'); %>
+    </head>
+    <body>
+        <a class="skip" href="#main">Skip to content</a>
+        <%- include('_header'); %>
+        <main id="main">
+            <section class="page-hero">
+                <div class="container">
+                    <div class="eyebrow">Contact</div>
+                    <h1>Write us. We read it.</h1>
+                    <p>Classes, gifts, gear, a kid who needs a license or a Christmas, a question about the books — start here.</p>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container grid grid-2">
+                    <div>
+                        <div class="card"><div class="kicker">Email</div>
+                        <h3><a href="mailto:contact@slowdown4sam.org">contact@slowdown4sam.org</a></h3>
+                        <p>Fastest way to reach the family and the board.</p>
+                    </div>
+                        <div class="card" style="margin-top:18px">
+                            <div class="kicker">Where we work</div>
+                            <h3>Michigan, United States</h3><p>Based in Michigan. Sam died in Petoskey — we work statewide.</p>
+                        </div>
+                        <div class="card" style="margin-top:18px">
+                            <div class="kicker">Open work</div>
+                            <h3><a href="https://github.com/Slow-Down-4-Sam" target="_blank" rel="noopener">GitHub</a></h3><p>Organization profile, this website, and future safety resources.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <form class="form">
+                            <label>Name<input type="text" name="name"></label>
+                            <label>Email<input type="email" name="email"></label>
+                            <label>Topic<select name="topic"><option>General question</option><option>Motorcycle safety</option><option>Donate</option><option>Gear</option><option>Youth programs</option><option>Reports</option></select></label>
+                            <label>Message<textarea name="message"></textarea></label>
+                            <button class="btn btn-primary" type="button">Send message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <%- include('_footer'); %>
+    </body>
+</html>

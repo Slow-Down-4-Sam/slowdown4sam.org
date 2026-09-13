@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Get Involved · Slow Down 4 Sam</title>
+        <meta name="description" content="Slow Down 4 Sam — Michigan nonprofit honoring Sam Gross through motorcycle safety and youth programs.">
+        <meta property="og:title" content="Get Involved · Slow Down 4 Sam" />
+        <meta property="og:description" content="Get involved with Slow Down 4 Sam, a Michigan nonprofit honoring Sam Gross through motorcycle safety and youth programs." />
+        <%- include('_global_meta'); %>
+    </head>
+    <body>
+        <a class="skip" href="#main">Skip to content</a>
+        <%- include('_header'); %>
+        <main id="main">
+            <section class="page-hero">
+                <div class="container">
+                    <div class="eyebrow">Get involved</div>
+                    <h1>Teach the class. Or fund the work.</h1><p>We need riders who can teach, and we need people who can give. Both keep young adults alive and kids in Michigan cared for.</p>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="grid grid-2">
+                        <div class="card">
+                            <div class="kicker">Teach</div>
+                            <h3>Teach a safety class</h3><p>If you can teach clutch work, braking, and judgment without humiliating anyone, we want you on a range.</p>
+                        </div>
+                        <div class="card">
+                            <div class="kicker">Gear</div>
+                            <h3>Donate gear</h3><p>Helmets, jackets, gloves, boots. We inspect everything. Unsafe gear does not go back out.</p>
+                        </div>
+                        <div class="card">
+                            <div class="kicker">Youth</div>
+                            <h3>Help with youth programs</h3><p>Licenses, Scout camp, Christmas for foster care. Quiet, practical work with kids and families.</p>
+                        </div>
+                        <div class="card">
+                            <div class="kicker">Give</div>
+                            <h3>Give financially</h3><p>Pick a fund and a number. Restricted gifts stay restricted.</p>
+                        </div>
+                    </div>
+                    <div class="section-head" style="margin-top:80px">
+                        <div class="eyebrow" style="color:var(--green-2)">Instructors</div>
+                        <h2>Volunteer to teach motorcycle safety</h2><p>Classes are for young adults who are new to bikes or new to taking them seriously. We cover control, gear, Michigan roads, weather, groups, and the specific habit that killed Sam: speed on a road you think you know.</p><p>You do not need to be a celebrity rider. You need a clean way of teaching, time on a motorcycle, and the patience to run a parking-lot range. MSF or similar credentials help.</p>
+                    </div>
+                    <div class="card">
+                        <form class="form">
+                            <label>Name<input name="name" type="text"></label>
+                            <label>Email<input name="email" type="email"></label>
+                            <label>City or region in Michigan<input name="region" type="text"></label>
+                            <label>Riding and teaching experience<textarea name="experience"></textarea></label>
+                            <label>Availability<input name="availability" type="text" placeholder="Evenings, weekends, a specific month…"></label>
+                            <label>Anything else<textarea name="notes"></textarea></label>
+                            <button class="btn btn-primary" type="button">Offer to teach</button>
+                        </form>
+                        <p class="meta">This form is a static front-end placeholder. Connect it to your email/form service before deployment.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <%- include('_footer'); %>
+    </body>
+</html>

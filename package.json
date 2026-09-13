@@ -1,0 +1,20 @@
+{
+  "name": "SlowDown4Sam.org - Non-Profit Organization",
+  "version": "1.0.0",
+  "description": "A non-profit organization dedicated to supporting and assisting individuals in need, providing aid, relief, and community outreach programs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Logan Gross",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.0",
+    "chalk": "^4.1.1",
+    "ejs": "^3.1.8",
+    "express": "^5.2.1",
+    "figlet": "^1.5.2",
+    "multer": "^2.3.0"
+  }
+}
